@@ -2,7 +2,7 @@
 
 Terminal app that builds Discord servers from natural language. Describe what you want, the AI asks follow-up questions, then creates all roles, categories, and channels automatically.
 
-![Main Menu](assets/preview_menu.png)
+![Main Menu](assets/preview-menu.png)
 
 ## Features
 
@@ -62,11 +62,11 @@ openai/gpt-oss-120b:free
 
 Open **Setup** from the menu, enter your Discord token and server ID, then describe the server you want in plain text.
 
-![Setup Screen](assets/preview_setup.png)
+![Setup Screen](assets/preview-setup.png)
 
 The AI will ask any necessary follow-up questions, then generate the full configuration. A summary (role count, channel count) is shown before anything is applied.
 
-![Build Progress](assets/preview_build.png)
+![Build Progress](assets/preview-build.png)
 
 ### 2 - Edit an existing server
 
@@ -78,7 +78,7 @@ Use **Rebuild** to apply a previously saved configuration to the same server or 
 
 ### 4 - Manage saved configs
 
-![Saved Configs](assets/preview_configs.png)
+![Saved Configs](assets/preview-configs.png)
 
 View, export as JSON, import an existing JSON, or delete saved configurations.
 
