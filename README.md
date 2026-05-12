@@ -6,14 +6,14 @@ Terminal app that builds Discord servers from natural language. Describe what yo
 
 ## Features
 
-- **AI-powered design** — Describe your server in plain text, the AI handles the rest
-- **Edit existing servers** — Tell the AI what to change, it detects the diff and applies only what's needed
-- **Rebuild from config** — Apply a saved configuration to any server
-- **Export / Import** — Share configs as JSON or import ones from others
-- **Full permission support** — All Discord permission flags including threads, voice, events, and soundboard
-- **Correct role ordering** — Roles are placed at the right position in the Discord hierarchy automatically
-- **User & bot token** — Works with both personal account tokens and bot tokens
-- **English & Turkish UI** — Full interface translation
+- **AI-powered design** - Describe your server in plain text, the AI handles the rest
+- **Edit existing servers** - Tell the AI what to change, it detects the diff and applies only what's needed
+- **Rebuild from config** - Apply a saved configuration to any server
+- **Export / Import** - Share configs as JSON or import ones from others
+- **Full permission support** - All Discord permission flags including threads, voice, events, and soundboard
+- **Correct role ordering** - Roles are placed at the right position in the Discord hierarchy automatically
+- **User & bot token** - Works with both personal account tokens and bot tokens
+- **English & Turkish UI** - Full interface translation
 
 ---
 
@@ -58,7 +58,7 @@ openai/gpt-oss-120b:free
 
 ## Usage
 
-### 1 — New server setup
+### 1 - New server setup
 
 Open **Setup** from the menu, enter your Discord token and server ID, then describe the server you want in plain text.
 
@@ -68,15 +68,15 @@ The AI will ask any necessary follow-up questions, then generate the full config
 
 ![Build Progress](assets/preview_build.png)
 
-### 2 — Edit an existing server
+### 2 - Edit an existing server
 
-Use **Edit** to select a previously built server or enter an ID directly. Describe what you want to change — add or remove channels, update permissions, rename roles — the AI calculates only the diff and applies it.
+Use **Edit** to select a previously built server or enter an ID directly. Describe what you want to change - add or remove channels, update permissions, rename roles - the AI calculates only the diff and applies it.
 
-### 3 — Rebuild from a saved config
+### 3 - Rebuild from a saved config
 
 Use **Rebuild** to apply a previously saved configuration to the same server or a completely different one.
 
-### 4 — Manage saved configs
+### 4 - Manage saved configs
 
 ![Saved Configs](assets/preview_configs.png)
 
