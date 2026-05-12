@@ -1,0 +1,604 @@
+{
+  "roles": [
+    {
+      "name": "General Manager",
+      "color": "#E74C3C",
+      "hoist": true,
+      "mentionable": true,
+      "permissions": [
+        "administrator"
+      ]
+    },
+    {
+      "name": "Race Director",
+      "color": "#E67E22",
+      "hoist": true,
+      "mentionable": true,
+      "permissions": [
+        "manage_channels",
+        "manage_roles",
+        "kick_members",
+        "ban_members",
+        "mention_everyone"
+      ]
+    },
+    {
+      "name": "Steward",
+      "color": "#F1C40F",
+      "hoist": true,
+      "mentionable": true,
+      "permissions": [
+        "manage_messages",
+        "mute_members",
+        "move_members"
+      ]
+    },
+    {
+      "name": "Media & Broadcast",
+      "color": "#9B59B6",
+      "hoist": true,
+      "mentionable": true,
+      "permissions": [
+        "manage_messages",
+        "attach_files",
+        "embed_links"
+      ]
+    },
+    {
+      "name": "Pro Driver",
+      "color": "#FFD700",
+      "hoist": true,
+      "mentionable": true,
+      "permissions": []
+    },
+    {
+      "name": "Driver",
+      "color": "#3498DB",
+      "hoist": true,
+      "mentionable": true,
+      "permissions": []
+    },
+    {
+      "name": "Rookie",
+      "color": "#95A5A6",
+      "hoist": true,
+      "mentionable": true,
+      "permissions": []
+    },
+    {
+      "name": "Spectator",
+      "color": "#BDC3C7",
+      "hoist": false,
+      "mentionable": false,
+      "permissions": []
+    },
+    {
+      "name": "Bot",
+      "color": "#2ECC71",
+      "hoist": false,
+      "mentionable": false,
+      "permissions": [
+        "administrator"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "name": "ANNOUNCEMENTS",
+      "role_overrides": {
+        "@everyone": {
+          "view_channel": true,
+          "send_messages": false,
+          "read_message_history": true
+        },
+        "General Manager": {
+          "send_messages": true
+        },
+        "Race Director": {
+          "send_messages": true
+        },
+        "Steward": {
+          "send_messages": true
+        },
+        "Media & Broadcast": {
+          "send_messages": true
+        },
+        "Bot": {
+          "send_messages": true
+        }
+      },
+      "channels": [
+        {
+          "name": "announcements",
+          "type": "announcement",
+          "topic": "Official server-wide announcements from the DAC management team",
+          "slowmode": 0,
+          "nsfw": false
+        },
+        {
+          "name": "news",
+          "type": "announcement",
+          "topic": "Latest news and updates from Draft Atlas Championship",
+          "slowmode": 0,
+          "nsfw": false
+        },
+        {
+          "name": "rule-updates",
+          "type": "announcement",
+          "topic": "Updates and changes to DAC league rules and regulations",
+          "slowmode": 0,
+          "nsfw": false
+        },
+        {
+          "name": "broadcast-schedule",
+          "type": "announcement",
+          "topic": "Upcoming race broadcasts, streaming schedules, and media coverage",
+          "slowmode": 0,
+          "nsfw": false
+        }
+      ]
+    },
+    {
+      "name": "LEAGUE INFO",
+      "role_overrides": {
+        "@everyone": {
+          "view_channel": true,
+          "send_messages": false,
+          "read_message_history": true
+        },
+        "General Manager": {
+          "send_messages": true
+        },
+        "Race Director": {
+          "send_messages": true
+        },
+        "Steward": {
+          "send_messages": true
+        },
+        "Media & Broadcast": {
+          "send_messages": true
+        },
+        "Bot": {
+          "send_messages": true
+        }
+      },
+      "channels": [
+        {
+          "name": "rules",
+          "type": "text",
+          "topic": "Full rules and regulations for the Draft Atlas Championship",
+          "slowmode": 0,
+          "nsfw": false
+        },
+        {
+          "name": "season-calendar",
+          "type": "text",
+          "topic": "Season schedule, race dates, and event calendar",
+          "slowmode": 0,
+          "nsfw": false
+        },
+        {
+          "name": "standings",
+          "type": "text",
+          "topic": "Current driver standings and championship points",
+          "slowmode": 0,
+          "nsfw": false
+        },
+        {
+          "name": "driver-registration",
+          "type": "forum",
+          "topic": "Apply for or manage your DAC driver registration",
+          "slowmode": 0,
+          "nsfw": false,
+          "forum_tags": [
+            "Pending",
+            "Approved",
+            "Rejected"
+          ]
+        },
+        {
+          "name": "useful-links",
+          "type": "text",
+          "topic": "Links to iRacing, tracks, cars, and other useful resources",
+          "slowmode": 0,
+          "nsfw": false
+        }
+      ]
+    },
+    {
+      "name": "GENERAL",
+      "channels": [
+        {
+          "name": "welcome",
+          "type": "text",
+          "topic": "Welcome to DAC! Introduce yourself and get started here",
+          "slowmode": 10,
+          "nsfw": false
+        },
+        {
+          "name": "general",
+          "type": "text",
+          "topic": "General discussion about DAC, sim racing, and everything in between",
+          "slowmode": 3,
+          "nsfw": false
+        },
+        {
+          "name": "off-topic",
+          "type": "text",
+          "topic": "Discuss anything not related to DAC or sim racing",
+          "slowmode": 5,
+          "nsfw": false
+        },
+        {
+          "name": "partners",
+          "type": "forum",
+          "topic": "Partner league promotions, collaborations, and partnership opportunities",
+          "slowmode": 0,
+          "nsfw": false,
+          "forum_tags": [
+            "Active Partner",
+            "Racing League",
+            "Content Creator",
+            "Sponsor"
+          ],
+          "role_overrides": {
+            "@everyone": {
+              "view_channel": true,
+              "send_messages": false,
+              "read_message_history": true
+            },
+            "General Manager": {
+              "send_messages": true
+            },
+            "Race Director": {
+              "send_messages": true
+            },
+            "Steward": {
+              "send_messages": true
+            },
+            "Media & Broadcast": {
+              "send_messages": true
+            },
+            "Bot": {
+              "send_messages": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "iRACING",
+      "role_overrides": {
+        "@everyone": {
+          "view_channel": false
+        },
+        "Driver": {
+          "view_channel": true,
+          "send_messages": true,
+          "read_message_history": true,
+          "add_reactions": true
+        },
+        "Pro Driver": {
+          "view_channel": true,
+          "send_messages": true,
+          "read_message_history": true,
+          "add_reactions": true
+        },
+        "General Manager": {
+          "view_channel": true
+        },
+        "Race Director": {
+          "view_channel": true
+        },
+        "Steward": {
+          "view_channel": true
+        },
+        "Media & Broadcast": {
+          "view_channel": true
+        },
+        "Bot": {
+          "view_channel": true
+        }
+      },
+      "channels": [
+        {
+          "name": "iracing-general",
+          "type": "text",
+          "topic": "General iRacing discussion, tips, and community interaction",
+          "slowmode": 0,
+          "nsfw": false
+        },
+        {
+          "name": "setup-sharing",
+          "type": "forum",
+          "topic": "Share and download car and track setups for iRacing",
+          "slowmode": 0,
+          "nsfw": false,
+          "forum_tags": [
+            "Dry",
+            "Wet",
+            "Baseline",
+            "Track-Specific"
+          ]
+        },
+        {
+          "name": "telemetry",
+          "type": "forum",
+          "topic": "Share and discuss telemetry data and analysis",
+          "slowmode": 0,
+          "nsfw": false,
+          "forum_tags": [
+            "MoTeC",
+            "Analysis",
+            "Comparison"
+          ]
+        },
+        {
+          "name": "buy-and-sell",
+          "type": "text",
+          "topic": "Buy, sell, or trade iRacing content, hardware, and services",
+          "slowmode": 30,
+          "nsfw": false
+        },
+        {
+          "name": "hardware-support",
+          "type": "text",
+          "topic": "Hardware setup, troubleshooting, and optimization help",
+          "slowmode": 0,
+          "nsfw": false
+        }
+      ]
+    },
+    {
+      "name": "RACING",
+      "role_overrides": {
+        "@everyone": {
+          "view_channel": false
+        },
+        "Driver": {
+          "view_channel": true,
+          "send_messages": true,
+          "read_message_history": true,
+          "add_reactions": true
+        },
+        "Pro Driver": {
+          "view_channel": true,
+          "send_messages": true,
+          "read_message_history": true,
+          "add_reactions": true
+        },
+        "General Manager": {
+          "view_channel": true
+        },
+        "Race Director": {
+          "view_channel": true
+        },
+        "Steward": {
+          "view_channel": true
+        },
+        "Media & Broadcast": {
+          "view_channel": true
+        },
+        "Bot": {
+          "view_channel": true
+        }
+      },
+      "channels": [
+        {
+          "name": "entry-list",
+          "type": "forum",
+          "topic": "View and register for upcoming race entries",
+          "slowmode": 0,
+          "nsfw": false,
+          "forum_tags": [
+            "Attending",
+            "Not Attending",
+            "Reserve"
+          ]
+        },
+        {
+          "name": "race-discussion",
+          "type": "text",
+          "topic": "Pre and post-race discussion, strategies, and debriefs",
+          "slowmode": 0,
+          "nsfw": false
+        },
+        {
+          "name": "results",
+          "type": "text",
+          "topic": "Official race results and classification sheets — staff post only",
+          "slowmode": 0,
+          "nsfw": false,
+          "role_overrides": {
+            "Driver": {
+              "send_messages": false
+            },
+            "Pro Driver": {
+              "send_messages": false
+            },
+            "Rookie": {
+              "send_messages": false
+            }
+          }
+        },
+        {
+          "name": "protest",
+          "type": "forum",
+          "topic": "Submit and review race protests and appeals",
+          "slowmode": 0,
+          "nsfw": false,
+          "forum_tags": [
+            "Under Review",
+            "Upheld",
+            "Rejected",
+            "Closed"
+          ]
+        },
+        {
+          "name": "replay-sharing",
+          "type": "forum",
+          "topic": "Share race replays, highlights, and incident footage",
+          "slowmode": 0,
+          "nsfw": false,
+          "forum_tags": [
+            "Highlight",
+            "Incident",
+            "Analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MEDIA",
+      "channels": [
+        {
+          "name": "screenshots",
+          "type": "text",
+          "topic": "Share your best in-game screenshots and photo modes",
+          "slowmode": 5,
+          "nsfw": false
+        },
+        {
+          "name": "videos",
+          "type": "text",
+          "topic": "Share your race videos, highlights, and content creations",
+          "slowmode": 10,
+          "nsfw": false
+        },
+        {
+          "name": "fan-art",
+          "type": "text",
+          "topic": "Share your DAC-themed artwork, designs, and creative content",
+          "slowmode": 10,
+          "nsfw": false
+        }
+      ]
+    },
+    {
+      "name": "VOICE CHANNELS",
+      "role_overrides": {
+        "@everyone": {
+          "view_channel": true,
+          "connect": true,
+          "speak": true
+        }
+      },
+      "channels": [
+        {
+          "name": "General Lobby",
+          "type": "voice",
+          "topic": "Hang out and chat with other drivers",
+          "bitrate": 64000,
+          "user_limit": 0
+        },
+        {
+          "name": "Pre-Race Briefing",
+          "type": "voice",
+          "topic": "Pre-race briefings and driver meetings",
+          "bitrate": 96000,
+          "user_limit": 0
+        },
+        {
+          "name": "Post-Race Debrief",
+          "type": "voice",
+          "topic": "Post-race discussions and debriefs",
+          "bitrate": 64000,
+          "user_limit": 0
+        },
+        {
+          "name": "Practice Room 1",
+          "type": "voice",
+          "topic": "Practice sessions - room 1",
+          "bitrate": 64000,
+          "user_limit": 8
+        },
+        {
+          "name": "Practice Room 2",
+          "type": "voice",
+          "topic": "Practice sessions - room 2",
+          "bitrate": 64000,
+          "user_limit": 8
+        },
+        {
+          "name": "AFK",
+          "type": "voice",
+          "topic": "Away from keyboard",
+          "bitrate": 8000,
+          "user_limit": 0
+        }
+      ]
+    },
+    {
+      "name": "STAFF",
+      "role_overrides": {
+        "@everyone": {
+          "view_channel": false
+        },
+        "Rookie": {
+          "view_channel": false
+        },
+        "Driver": {
+          "view_channel": false
+        },
+        "Pro Driver": {
+          "view_channel": false
+        },
+        "Spectator": {
+          "view_channel": false
+        },
+        "Media & Broadcast": {
+          "view_channel": false
+        },
+        "General Manager": {
+          "view_channel": true
+        },
+        "Race Director": {
+          "view_channel": true
+        },
+        "Steward": {
+          "view_channel": true
+        },
+        "Bot": {
+          "view_channel": true
+        }
+      },
+      "channels": [
+        {
+          "name": "staff-general",
+          "type": "text",
+          "topic": "General staff coordination and discussions",
+          "slowmode": 0,
+          "nsfw": false
+        },
+        {
+          "name": "steward-decisions",
+          "type": "text",
+          "topic": "Steward decisions, incident reviews, and rulings",
+          "slowmode": 0,
+          "nsfw": false
+        },
+        {
+          "name": "bot-commands",
+          "type": "text",
+          "topic": "Bot commands and automated functions",
+          "slowmode": 0,
+          "nsfw": false
+        },
+        {
+          "name": "statistics",
+          "type": "text",
+          "topic": "League statistics and performance data",
+          "slowmode": 0,
+          "nsfw": false
+        },
+        {
+          "name": "Staff Voice",
+          "type": "voice",
+          "topic": "Staff voice channel",
+          "bitrate": 64000,
+          "user_limit": 10
+        }
+      ]
+    }
+  ]
+}
