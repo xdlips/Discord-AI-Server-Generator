@@ -57,13 +57,13 @@ STRINGS: dict[str, dict[str, str]] = {
         "select_token_type": "Select token type",
         "enter_token": "Paste your token",
         "enter_server_id": "Enter Server ID",
-        "token_valid": "Token valid — logged in as",
+        "token_valid": "Token valid - logged in as",
         "token_invalid": "Invalid token",
         "server_found": "Server found",
         "server_not_found": "Server not found",
         "setup_title": "Server Setup",
         "setup_hint": "Describe the server you want. The AI will ask questions then build it.",
-        "design_complete": "Design complete — config saved",
+        "design_complete": "Design complete - config saved",
         "build_q": "Build the server now? (wipes all existing channels & roles)",
         "skip_hint": "Skipped. Use 'Rebuild' from the menu to apply later.",
         "setup_complete": "Server setup complete",
@@ -102,7 +102,7 @@ STRINGS: dict[str, dict[str, str]] = {
         "import_name": "Server name for this config",
         "import_id": "Server ID (for labeling, can be changed later)",
         "import_success": "Config imported successfully",
-        "import_error": "Invalid config file — must contain 'roles' key",
+        "import_error": "Invalid config file - must contain 'roles' key",
         "file_not_found": "File not found",
         "settings_title": "Settings",
         "lang_current": "Language",
@@ -116,14 +116,14 @@ STRINGS: dict[str, dict[str, str]] = {
         "you": "You",
         "ai_label": "AI",
         "aborted": "Aborted",
-        "wipe_warn": "Starting in 5 seconds — press Ctrl+C to abort",
+        "wipe_warn": "Starting in 5 seconds - press Ctrl+C to abort",
         "confirm_y": "[y/N]",
         "empty_input": "Input cannot be empty",
         "incomplete": "Response incomplete, requesting continuation",
         "api_error": "API error",
-        "empty_resp": "Empty API response — verify MODEL= in .env is a valid OpenRouter model ID. Current model",
+        "empty_resp": "Empty API response - verify MODEL= in .env is a valid OpenRouter model ID. Current model",
         "missing_key": "OPENROUTER_API_KEY missing in .env",
-        "missing_model": "MODEL missing in .env — set a valid OpenRouter model ID",
+        "missing_model": "MODEL missing in .env - set a valid OpenRouter model ID",
         "press_enter": "Press Enter to continue...",
     },
     "tr": {
@@ -148,13 +148,13 @@ STRINGS: dict[str, dict[str, str]] = {
         "select_token_type": "Token türünü seçin",
         "enter_token": "Tokeninizi yapıştırın",
         "enter_server_id": "Sunucu ID girin",
-        "token_valid": "Token geçerli — giriş yapıldı",
+        "token_valid": "Token geçerli - giriş yapıldı",
         "token_invalid": "Geçersiz token",
         "server_found": "Sunucu bulundu",
         "server_not_found": "Sunucu bulunamadı",
         "setup_title": "Sunucu Kurulumu",
         "setup_hint": "Sunucunuzu tarif edin. Yapay zeka soru sorup kuracak.",
-        "design_complete": "Tasarım tamamlandı — yapılandırma kaydedildi",
+        "design_complete": "Tasarım tamamlandı - yapılandırma kaydedildi",
         "build_q": "Sunucuyu şimdi kur? (mevcut tüm kanallar ve roller silinecek)",
         "skip_hint": "Atlandı. Sonra menüden 'Yeniden Kur' ile uygulayabilirsin.",
         "setup_complete": "Sunucu kurulumu tamamlandı",
@@ -193,7 +193,7 @@ STRINGS: dict[str, dict[str, str]] = {
         "import_name": "Bu yapılandırma için sunucu adı",
         "import_id": "Sunucu ID (etiketleme için, sonra değiştirilebilir)",
         "import_success": "Yapılandırma başarıyla içe aktarıldı",
-        "import_error": "Geçersiz config dosyası — 'roles' anahtarı eksik",
+        "import_error": "Geçersiz config dosyası - 'roles' anahtarı eksik",
         "file_not_found": "Dosya bulunamadı",
         "settings_title": "Ayarlar",
         "lang_current": "Dil",
@@ -207,14 +207,14 @@ STRINGS: dict[str, dict[str, str]] = {
         "you": "Sen",
         "ai_label": "Yapay Zeka",
         "aborted": "İptal edildi",
-        "wipe_warn": "5 saniye içinde başlıyor — durdurmak için Ctrl+C",
+        "wipe_warn": "5 saniye içinde başlıyor - durdurmak için Ctrl+C",
         "confirm_y": "[e/H]",
         "empty_input": "Boş bırakılamaz",
         "incomplete": "Cevap eksik, devam isteniyor",
         "api_error": "API hatası",
-        "empty_resp": "Boş API yanıtı — .env'deki MODEL= geçerli bir OpenRouter model ID'si mi kontrol edin. Mevcut model",
+        "empty_resp": "Boş API yanıtı - .env'deki MODEL= geçerli bir OpenRouter model ID'si mi kontrol edin. Mevcut model",
         "missing_key": ".env dosyasında OPENROUTER_API_KEY eksik",
-        "missing_model": ".env dosyasında MODEL eksik — geçerli bir OpenRouter model ID'si girin",
+        "missing_model": ".env dosyasında MODEL eksik - geçerli bir OpenRouter model ID'si girin",
         "press_enter": "Devam etmek için Enter'a basın...",
     },
 }
@@ -271,7 +271,7 @@ READY_TO_BUILD
 { ... }
 ```
 
-STRICT JSON SCHEMA — follow exactly:
+STRICT JSON SCHEMA - follow exactly:
 
 {
   "roles": [
@@ -349,14 +349,14 @@ READY_TO_APPLY
 ```
 
 SCHEMAS:
-roles_to_add       — {{"name","color","hoist","mentionable","permissions":[]}}
-roles_to_delete    — ["Role Name"]
-roles_to_edit      — [{{"name":"Existing Role","fields":{{"color":"#AABBCC"}}}}]
-categories_to_add  — same as setup category (includes channels array)
-categories_to_delete — ["CATEGORY NAME"]
-channels_to_add    — [{{"category_name":"CAT NAME","channel":{{...}}}}]
-channels_to_delete — ["channel-name"]
-channels_to_edit   — [{{"name":"channel-name","fields":{{"topic":"new","slowmode":5}}}}]
+roles_to_add       - {{"name","color","hoist","mentionable","permissions":[]}}
+roles_to_delete    - ["Role Name"]
+roles_to_edit      - [{{"name":"Existing Role","fields":{{"color":"#AABBCC"}}}}]
+categories_to_add  - same as setup category (includes channels array)
+categories_to_delete - ["CATEGORY NAME"]
+channels_to_add    - [{{"category_name":"CAT NAME","channel":{{...}}}}]
+channels_to_delete - ["channel-name"]
+channels_to_edit   - [{{"name":"channel-name","fields":{{"topic":"new","slowmode":5}}}}]
 
 RULES:
 - Only include items that actually change; empty arrays can be omitted
@@ -390,7 +390,7 @@ def ai_continue_json(client: OpenAI, messages: list, partial: str) -> str:
         {"role": "assistant", "content": tail},
         {"role": "user", "content": (
             "Your JSON response was cut off. Continue from the exact character where it stopped. "
-            "Output ONLY the raw JSON continuation — no markdown fences, no explanation, no preamble. "
+            "Output ONLY the raw JSON continuation - no markdown fences, no explanation, no preamble. "
             "Do not repeat any part already written."
         )},
     ]
@@ -565,7 +565,7 @@ class DiscordClient:
             resp = requests.request(method, url, headers=self.headers, json=data)
             if resp.status_code == 429:
                 wait = float(resp.json().get("retry_after", 1.0))
-                console.print(f"  [dim]Rate limited — waiting {wait:.1f}s[/dim]")
+                console.print(f"  [dim]Rate limited - waiting {wait:.1f}s[/dim]")
                 time.sleep(wait)
                 continue
             return resp
@@ -1509,11 +1509,11 @@ def main():
     while True:
         show_header()
         console.print(Panel(
-            f"  [bold][1][/bold]  {t('opt_setup')}    — {t('opt_setup_desc')}\n"
-            f"  [bold][2][/bold]  {t('opt_edit')}     — {t('opt_edit_desc')}\n"
-            f"  [bold][3][/bold]  {t('opt_rebuild')}  — {t('opt_rebuild_desc')}\n"
-            f"  [bold][4][/bold]  {t('opt_configs')}  — {t('opt_configs_desc')}\n"
-            f"  [bold][5][/bold]  {t('opt_settings')} — {t('opt_settings_desc')}\n"
+            f"  [bold][1][/bold]  {t('opt_setup')}    - {t('opt_setup_desc')}\n"
+            f"  [bold][2][/bold]  {t('opt_edit')}     - {t('opt_edit_desc')}\n"
+            f"  [bold][3][/bold]  {t('opt_rebuild')}  - {t('opt_rebuild_desc')}\n"
+            f"  [bold][4][/bold]  {t('opt_configs')}  - {t('opt_configs_desc')}\n"
+            f"  [bold][5][/bold]  {t('opt_settings')} - {t('opt_settings_desc')}\n"
             f"  [bold][0][/bold]  {t('opt_exit')}",
             title=f"[bold]{t('main_menu')}[/bold]",
             border_style="cyan",
