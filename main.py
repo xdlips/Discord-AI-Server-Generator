@@ -468,14 +468,17 @@ def extract_changeset(text: str) -> dict | None:
 
 
 def _complete_json(ai: OpenAI, messages: list, reply: str,
-                   extractor, marker: str) -> tuple[str, dict | None]:
+                   extractor, marker: str,
+                   is_truncated: bool = False) -> tuple[str, dict | None]:
     if marker not in reply and "```json" not in reply:
         return reply, None
     accumulated = reply
+    result = extractor(accumulated)
+    if result:
+        return accumulated, result
+    if not is_truncated:
+        return accumulated, None
     for attempt in range(10):
-        result = extractor(accumulated)
-        if result:
-            return accumulated, result
         console.print(f"  [dim]{t('incomplete')} ({attempt+1}/10)...[/dim]")
         with console.status(f"[dim]{t('continuing')}[/dim]", spinner="dots"):
             try:
@@ -485,6 +488,9 @@ def _complete_json(ai: OpenAI, messages: list, reply: str,
         if not cont:
             break
         accumulated += cont
+        result = extractor(accumulated)
+        if result:
+            return accumulated, result
     return accumulated, extractor(accumulated)
 
 
@@ -1086,7 +1092,7 @@ def _chat_loop(ai: OpenAI, messages: list,
 
         with console.status(f"[dim]{t('thinking')}[/dim]", spinner="dots"):
             try:
-                reply, _ = ai_chat(ai, messages)
+                reply, is_truncated = ai_chat(ai, messages)
             except Exception as e:
                 console.print(f"  [red]{t('api_error')}: {e}[/red]")
                 continue
@@ -1094,7 +1100,7 @@ def _chat_loop(ai: OpenAI, messages: list,
             console.print(f"  [red]{t('empty_resp')}: [bold]{current_model()}[/bold][/red]")
             continue
 
-        reply, result = _complete_json(ai, messages, reply, extractor, marker)
+        reply, result = _complete_json(ai, messages, reply, extractor, marker, is_truncated)
         messages.append({"role": "assistant", "content": reply})
 
         display = re.sub(rf"{marker}.*", "", reply, flags=re.DOTALL)
